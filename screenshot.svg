@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0074FF"/>
+      <stop offset="100%" stop-color="#0062D6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.03">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#0074FF" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#0074FF" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#0074FF" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#0074FF" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#0074FF" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="630" stroke="#0074FF" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="630" stroke="#0074FF" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#0074FF" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="630" stroke="#0074FF" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="630" stroke="#0074FF" stroke-width="0.5"/>
+  </g>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="1200" height="56" fill="#0D1526" opacity="0.95"/>
+  <rect x="0" y="54" width="1200" height="2" fill="url(#accent)" opacity="0.5"/>
+
+  <!-- Logo area -->
+  <text x="30" y="36" font-family="monospace" font-size="18" font-weight="bold" fill="#0074FF">&lt;AEL/&gt;</text>
+  <text x="90" y="36" font-family="sans-serif" font-size="14" fill="#6B7B8D">Code Analyzer</text>
+
+  <!-- Window controls -->
+  <circle cx="1100" cy="28" r="7" fill="#FF5F56" opacity="0.8"/>
+  <circle cx="1125" cy="28" r="7" fill="#FFBD2E" opacity="0.8"/>
+  <circle cx="1150" cy="28" r="7" fill="#27C93F" opacity="0.8"/>
+
+  <!-- Main editor panel -->
+  <rect x="30" y="80" width="740" height="480" rx="8" fill="#0D1526" stroke="#1E2D4A" stroke-width="1"/>
+
+  <!-- Editor header -->
+  <rect x="30" y="80" width="740" height="36" rx="8" fill="#111B2E"/>
+  <rect x="30" y="116" width="740" height="1" fill="#1E2D4A"/>
+  <text x="60" y="103" font-family="monospace" font-size="13" fill="#6B7B8D">code.html</text>
+
+  <!-- Line numbers -->
+  <text x="50" y="146" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">1</text>
+  <text x="50" y="168" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">2</text>
+  <text x="50" y="190" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">3</text>
+  <text x="50" y="212" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">4</text>
+  <text x="50" y="234" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">5</text>
+  <text x="50" y="256" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">6</text>
+  <text x="50" y="278" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">7</text>
+  <text x="50" y="300" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">8</text>
+  <text x="50" y="322" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">9</text>
+  <text x="50" y="344" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">10</text>
+  <text x="50" y="366" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">11</text>
+  <text x="50" y="388" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">12</text>
+  <text x="50" y="410" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">13</text>
+  <text x="50" y="432" font-family="monospace" font-size="12" fill="#3D4F63" text-anchor="end">14</text>
+
+  <!-- Line separator -->
+  <line x1="65" y1="126" x2="65" y2="555" stroke="#1E2D4A" stroke-width="1"/>
+
+  <!-- Code content with syntax coloring -->
+  <text x="78" y="146" font-family="monospace" font-size="12" fill="#E6EEF8">&lt;!DOCTYPE html&gt;</text>
+  <text x="78" y="168" font-family="monospace" font-size="12" fill="#FF7B72">&lt;html</text>
+  <text x="132" y="168" font-family="monospace" font-size="12" fill="#79C0FF">lang</text>
+  <text x="162" y="168" font-family="monospace" font-size="12" fill="#A5D6FF">=</text>
+  <text x="170" y="168" font-family="monospace" font-size="12" fill="#A5D6FF">"en"</text>
+  <text x="196" y="168" font-family="monospace" font-size="12" fill="#FF7B72">&gt;</text>
+  <text x="78" y="190" font-family="monospace" font-size="12" fill="#FF7B72">&lt;head&gt;</text>
+  <text x="102" y="212" font-family="monospace" font-size="12" fill="#FF7B72">&lt;meta</text>
+  <text x="140" y="212" font-family="monospace" font-size="12" fill="#79C0FF">charset</text>
+  <text x="170" y="212" font-family="monospace" font-size="12" fill="#A5D6FF">=</text>
+  <text x="178" y="212" font-family="monospace" font-size="12" fill="#A5D6FF">"UTF-8"</text>
+  <text x="222" y="212" font-family="monospace" font-size="12" fill="#FF7B72">&gt;</text>
+  <text x="102" y="234" font-family="monospace" font-size="12" fill="#FF7B72">&lt;title&gt;</text>
+  <text x="146" y="234" font-family="monospace" font-size="12" fill="#E6EEF8">My App</text>
+  <text x="198" y="234" font-family="monospace" font-size="12" fill="#FF7B72">&lt;/title&gt;</text>
+  <text x="78" y="256" font-family="monospace" font-size="12" fill="#FF7B72">&lt;/head&gt;</text>
+  <text x="78" y="278" font-family="monospace" font-size="12" fill="#FF7B72">&lt;body&gt;</text>
+  <text x="102" y="300" font-family="monospace" font-size="12" fill="#FF7B72">&lt;h1&gt;</text>
+  <text x="130" y="300" font-family="monospace" font-size="12" fill="#E6EEF8">Hello World</text>
+  <text x="212" y="300" font-family="monospace" font-size="12" fill="#FF7B72">&lt;/h1&gt;</text>
+  <text x="102" y="322" font-family="monospace" font-size="12" fill="#FF7B72">&lt;p&gt;</text>
+  <text x="118" y="322" font-family="monospace" font-size="12" fill="#7EE787">Welcome to my site.</text>
+  <text x="250" y="322" font-family="monospace" font-size="12" fill="#FF7B72">&lt;/p&gt;</text>
+  <text x="102" y="344" font-family="monospace" font-size="12" fill="#FF7B72">&lt;script&gt;</text>
+  <text x="126" y="366" font-family="monospace" font-size="12" fill="#D2A8FF">console</text>
+  <text x="170" y="366" font-family="monospace" font-size="12" fill="#E6EEF8">.</text>
+  <text x="174" y="366" font-family="monospace" font-size="12" fill="#79C0FF">log</text>
+  <text x="196" y="366" font-family="monospace" font-size="12" fill="#E6EEF8">(</text>
+  <text x="204" y="366" font-family="monospace" font-size="12" fill="#A5D6FF">"Ready!"</text>
+  <text x="258" y="366" font-family="monospace" font-size="12" fill="#E6EEF8">)</text>
+  <text x="270" y="366" font-family="monospace" font-size="12" fill="#6B7B8D">;</text>
+  <text x="102" y="388" font-family="monospace" font-size="12" fill="#FF7B72">&lt;/script&gt;</text>
+  <text x="78" y="410" font-family="monospace" font-size="12" fill="#FF7B72">&lt;/body&gt;</text>
+  <text x="78" y="432" font-family="monospace" font-size="12" fill="#FF7B72">&lt;/html&gt;</text>
+
+  <!-- Cursor blink -->
+  <rect x="78" y="440" width="2" height="14" fill="#FFD700" filter="url(#glow)">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Right panel - Metrics -->
+  <rect x="800" y="80" width="370" height="140" rx="8" fill="#0D1526" stroke="#1E2D4A" stroke-width="1"/>
+  <text x="820" y="106" font-family="sans-serif" font-size="14" font-weight="600" fill="#E6EEF8">Metrics</text>
+
+  <!-- LOC -->
+  <rect x="820" y="122" width="105" height="80" rx="6" fill="#111B2E" stroke="#1E2D4A" stroke-width="0.5"/>
+  <text x="872" y="152" font-family="monospace" font-size="24" font-weight="bold" fill="#0074FF" text-anchor="middle">14</text>
+  <text x="872" y="172" font-family="sans-serif" font-size="11" fill="#6B7B8D" text-anchor="middle">Lines of Code</text>
+
+  <!-- Score -->
+  <rect x="935" y="122" width="105" height="80" rx="6" fill="#111B2E" stroke="#1E2D4A" stroke-width="0.5"/>
+  <text x="987" y="152" font-family="monospace" font-size="24" font-weight="bold" fill="#27C93F" text-anchor="middle">92</text>
+  <text x="987" y="172" font-family="sans-serif" font-size="11" fill="#6B7B8D" text-anchor="middle">Quality Score</text>
+
+  <!-- Issues -->
+  <rect x="1050" y="122" width="105" height="80" rx="6" fill="#111B2E" stroke="#1E2D4A" stroke-width="0.5"/>
+  <text x="1102" y="152" font-family="monospace" font-size="24" font-weight="bold" fill="#FF7B72" text-anchor="middle">2</text>
+  <text x="1102" y="172" font-family="sans-serif" font-size="11" fill="#6B7B8D" text-anchor="middle">Issues</text>
+
+  <!-- Right panel - Issues -->
+  <rect x="800" y="240" width="370" height="155" rx="8" fill="#0D1526" stroke="#1E2D4A" stroke-width="1"/>
+  <text x="820" y="266" font-family="sans-serif" font-size="14" font-weight="600" fill="#E6EEF8">Issues</text>
+
+  <!-- Issue items -->
+  <rect x="820" y="282" width="335" height="28" rx="4" fill="#2D1B1B" opacity="0.7"/>
+  <text x="832" y="301" font-family="monospace" font-size="11" fill="#FF7B72">●</text>
+  <text x="844" y="301" font-family="monospace" font-size="11" fill="#FFAQA9">Missing lang attribute on &lt;html&gt;</text>
+
+  <rect x="820" y="316" width="335" height="28" rx="4" fill="#2D1B1B" opacity="0.7"/>
+  <text x="832" y="335" font-family="monospace" font-size="11" fill="#FF7B72">●</text>
+  <text x="844" y="335" font-family="monospace" font-size="11" fill="#FFAQA9">Missing &lt;meta viewport&gt; tag</text>
+
+  <rect x="820" y="350" width="335" height="28" rx="4" fill="#1B2D1B" opacity="0.7"/>
+  <text x="832" y="369" font-family="monospace" font-size="11" fill="#27C93F">✓</text>
+  <text x="844" y="369" font-family="monospace" font-size="11" fill="#7EE787">No duplicate lines detected</text>
+
+  <!-- Right panel - Suggestions -->
+  <rect x="800" y="415" width="370" height="145" rx="8" fill="#0D1526" stroke="#1E2D4A" stroke-width="1"/>
+  <text x="820" y="441" font-family="sans-serif" font-size="14" font-weight="600" fill="#E6EEF8">Suggestions</text>
+
+  <rect x="820" y="457" width="335" height="28" rx="4" fill="#111B2E" stroke="#1E2D4A" stroke-width="0.5"/>
+  <text x="832" y="476" font-family="monospace" font-size="11" fill="#79C0FF">ℹ</text>
+  <text x="844" y="476" font-family="monospace" font-size="11" fill="#C9D1D9">Add &lt;meta name="viewport"&gt;</text>
+
+  <rect x="820" y="491" width="335" height="28" rx="4" fill="#111B2E" stroke="#1E2D4A" stroke-width="0.5"/>
+  <text x="832" y="510" font-family="monospace" font-size="11" fill="#79C0FF">ℹ</text>
+  <text x="844" y="510" font-family="monospace" font-size="11" fill="#C9D1D9">Consider adding a &lt;link&gt; stylesheet</text>
+
+  <rect x="820" y="525" width="335" height="28" rx="4" fill="#111B2E" stroke="#1E2D4A" stroke-width="0.5"/>
+  <text x="832" y="544" font-family="monospace" font-size="11" fill="#79C0FF">ℹ</text>
+  <text x="844" y="544" font-family="monospace" font-size="11" fill="#C9D1D9">Use semantic elements (&lt;main&gt;, &lt;section&gt;)</text>
+
+  <!-- Footer -->
+  <rect x="0" y="590" width="1200" height="40" fill="#0D1526" opacity="0.95"/>
+  <text x="600" y="614" font-family="sans-serif" font-size="11" fill="#3D4F63" text-anchor="middle">ael-code-analyzer · v5.0 · AEL Digital Studio · © 2026</text>
+</svg>

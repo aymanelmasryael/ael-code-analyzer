@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AEL Code Analyzer — Professional static analysis, smart duplicate detection, and AI-style suggestions.">
+    <meta name="author" content="Ayman Elmasry — AEL Digital Studio">
+    <title>AEL Code Analyzer · Smart Duplicate Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="ael-header">
+        <div class="ael-brand">
+            <div class="ael-logo">
+                <svg width="36" height="36" viewBox="0 0 226.77 226.77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m97.19,48.59v16.2h-32.4v-16.2c0-8.94-7.25-16.2-16.2-16.2s-16.2,7.25-16.2,16.2v16.2H0v-16.2c0-5.68.98-11.13,2.76-16.2C9.44,13.52,27.44,0,48.59,0s39.16,13.52,45.83,32.4c1.79,5.07,2.76,10.52,2.76,16.2Z" fill="white"/>
+                    <rect x="0" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="64.79" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="64.79" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="0" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="129.58" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="161.98" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="194.38" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="129.58" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="129.58" y="0" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="161.98" y="0" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="194.38" y="0" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="129.58" y="32.4" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="0" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="32.4" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="64.79" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="97.19" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="129.58" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="161.98" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+                    <rect x="194.38" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+                </svg>
+            </div>
+            <div>
+                <div class="ael-title">AEL Code Analyzer</div>
+                <div style="font-size:0.75rem; color:var(--ael-text-secondary);">Professional static analysis · v5.0</div>
+            </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.8rem; flex-wrap:wrap;">
+            <span style="font-size:0.7rem; color:var(--ael-text-secondary);"><span class="ael-kbd">Ctrl+Enter</span> analyze</span>
+            <span class="ael-badge">SMART DUPLICATE FILTER</span>
+        </div>
+    </header>
+
+    <main class="ael-main">
+        <!-- LEFT: EDITOR -->
+        <div class="ael-editor-panel">
+            <div class="ael-editor-header">
+                <div class="ael-language-selector">
+                    <button class="ael-lang-btn active" data-lang="auto">Auto</button>
+                    <button class="ael-lang-btn" data-lang="html">HTML</button>
+                    <button class="ael-lang-btn" data-lang="css">CSS</button>
+                    <button class="ael-lang-btn" data-lang="js">JavaScript</button>
+                    <button class="ael-lang-btn" data-lang="py">Python</button>
+                    <button class="ael-lang-btn" data-lang="json">JSON</button>
+                </div>
+                <div class="ael-editor-actions">
+                    <button class="ael-btn ael-btn-outline" id="clearBtn">Clear</button>
+                    <button class="ael-btn" id="analyzeBtn">Analyze</button>
+                </div>
+            </div>
+            <div class="ael-editor-container" id="editorContainer">
+                <div class="ael-line-numbers" id="lineNumbers">1</div>
+                <textarea class="ael-code-area" id="codeEditor" spellcheck="false" placeholder="Paste or type your code here..."></textarea>
+                <div class="ael-drop-zone" id="dropZone">Drop file here</div>
+            </div>
+        </div>
+
+        <!-- RIGHT: RESULTS -->
+        <div class="ael-results-panel">
+            <div class="ael-card">
+                <div class="ael-card-header">
+                    <span class="ael-card-title">Code Metrics</span>
+                    <span id="analysisTime" style="color:var(--ael-text-secondary);font-size:0.8rem;">ready</span>
+                </div>
+                <div class="ael-metrics-grid" id="metricsGrid">
+                    <div class="ael-metric">
+                        <div class="ael-metric-value" id="loc">-</div>
+                        <div class="ael-metric-label">Lines of Code</div>
+                    </div>
+                    <div class="ael-metric gold">
+                        <div class="ael-metric-value" id="quality">-</div>
+                        <div class="ael-metric-label">Quality Score</div>
+                    </div>
+                    <div class="ael-metric danger">
+                        <div class="ael-metric-value" id="issues">-</div>
+                        <div class="ael-metric-label">Issues</div>
+                    </div>
+                    <div class="ael-metric purple">
+                        <div class="ael-metric-value" id="duplicates">-</div>
+                        <div class="ael-metric-label">Duplicates</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ael-card">
+                <div class="ael-card-header">
+                    <span class="ael-card-title">Issues & Warnings</span>
+                    <span style="color:var(--ael-error); font-size:0.85rem;" id="issueCount">0</span>
+                </div>
+                <div class="ael-list" id="issuesList">
+                    <div class="ael-empty-state">No code to analyze</div>
+                </div>
+            </div>
+
+            <div class="ael-card">
+                <div class="ael-card-header">
+                    <span class="ael-card-title">Duplicate Lines</span>
+                    <span style="color:var(--ael-warning); font-size:0.85rem;" id="dupCount">0</span>
+                </div>
+                <div class="ael-list" id="duplicatesList"></div>
+            </div>
+
+            <div class="ael-card">
+                <div class="ael-card-header">
+                    <span class="ael-card-title">Suggestions</span>
+                </div>
+                <div class="ael-list" id="suggestionsList">
+                    <div class="ael-empty-state">No suggestions</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="ael-footer">
+        <div class="ael-legal-title">AEL SOVEREIGN IDENTITY BLOCK</div>
+        <div><strong>Legal Owner:</strong> Ayman Elmasry</div>
+        <div><strong>Legal Entities:</strong> Ayman Elmasry LLC (UAE) · Ayman Elmasry Advertising & Marketing (Egypt)</div>
+        <div><strong>Primary Domain:</strong> www.aymanelmasry.com</div>
+        <div><strong>Official Contact:</strong> info@aymanelmasry.com</div>
+        <div style="margin-top:0.6rem;"><strong>IP Systems:</strong> AEL Digital Framework · AEL Prompt IP System v1.0 · AEL Sovereign Identity Block</div>
+        <div style="margin-top:0.6rem; font-size:0.65rem; opacity:0.6;">© 2026 Ayman Elmasry — All rights reserved. Unauthorized reproduction prohibited.</div>
+    </footer>
+
+    <div class="ael-notification" id="notification">
+        <strong id="notifyTitle">System</strong>
+        <div id="notifyMsg">Analysis complete</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
