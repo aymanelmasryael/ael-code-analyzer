@@ -67,7 +67,7 @@ ael-code-analyzer/
 
 **Created by:** Ayman Elmasry — AEL Digital Studio
 **Website:** [aymanelmasry.com](https://www.aymanelmasry.com)
-**License:** © 2026 Ayman Elmasry — AEL Digital Studio. All rights reserved.
+**License:** MIT License — Free for personal and commercial use.
 
 ### Connect
 
