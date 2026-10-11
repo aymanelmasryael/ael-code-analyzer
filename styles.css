@@ -1,16 +1,16 @@
 :root {
     --ael-blue: #0074FF;
-    --ael-blue-dark: #0059C8;
+    --ael-blue-dark: #0055CC;
     --ael-blue-light: #3391FF;
-    --ael-bg-deep: #0A0F1C;
-    --ael-bg-card: #111827;
-    --ael-border: #1E293B;
+    --ael-bg-deep: #0B1220;
+    --ael-bg-card: #0B1220;
+    --ael-border: #0F1720;
     --ael-text: #F1F5F9;
     --ael-text-secondary: #94A3B8;
     --ael-success: #10B981;
     --ael-warning: #F59E0B;
     --ael-error: #EF4444;
-    --ael-info: #3B82F6;
+    --ael-info: #0074FF;
     --ael-purple: #6C47FF;
     --ael-gold: #FFD700;
     --glass-blur: blur(12px);
@@ -20,7 +20,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background: var(--ael-bg-deep);
     color: var(--ael-text);
     min-height: 100vh;
@@ -192,7 +192,7 @@ body {
 .ael-editor-container {
     display: flex;
     flex: 1;
-    background: #050913;
+    background: #0B1220;
     overflow: hidden;
     position: relative;
     min-height: 300px;
@@ -201,7 +201,7 @@ body {
 .ael-line-numbers {
     padding: 1rem 0.5rem 1rem 1rem;
     text-align: right;
-    background: #03050b;
+    background: #0B1220;
     color: var(--ael-text-secondary);
     border-right: 1px solid var(--ael-border);
     user-select: none;
@@ -397,7 +397,7 @@ body {
 }
 
 .ael-footer {
-    background: #050913;
+    background: #0B1220;
     border-top: 1px solid var(--ael-border);
     padding: 1.2rem 2rem;
     font-size: 0.75rem;
